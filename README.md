@@ -1,6 +1,6 @@
 # EKOM Swift Starter
 
-Base para novos apps iOS da EKOM, mantida na organização GitHub `iotsmartsys`. O repositório contém o projeto Xcode em `template/`, um gerador em `scripts/` e a Skill Codex em `skills/criar-app-swift-base/`.
+Base completa para novos apps iOS da EKOM, mantida na organização GitHub `iotsmartsys`. O repositório contém o projeto Xcode em `template/`, um gerador em `scripts/` e a Skill Codex em `skills/criar-app-swift-base/`.
 
 ## Criar um app
 
@@ -21,3 +21,7 @@ Execute na raiz deste repositório. Se já houver uma Skill com esse nome, remov
 ## Publicação
 
 Este repositório ainda não contém uma licença; a decisão está pendente. O template usa a tela inicial simples e não inclui o ícone do app financeiro de origem, credenciais ou endpoints.
+
+## Convenções e funcionalidades
+
+Leia [docs/CODING_CONVENTIONS.md](docs/CODING_CONVENTIONS.md) antes de ampliar um app. A base inclui tabs, menu, lista, formulário, ViewModel, services por operação, JSON de preview e Shared HTTP. O modo demo funciona em memória; a integração real exige configurar API e desativá-lo.

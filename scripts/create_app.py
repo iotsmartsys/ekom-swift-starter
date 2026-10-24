@@ -24,10 +24,11 @@ def main() -> int:
     if target.exists():
         parser.error(f"destino já existe: {target}")
     shutil.copytree(TEMPLATE, target)
+    shutil.copytree(ROOT / "docs", target / "docs")
     project = target / "BaseApp.xcodeproj"
     source = target / "BaseApp"
     scheme = project / "xcshareddata/xcschemes/BaseApp.xcscheme"
-    for path in (project / "project.pbxproj", scheme, source / "BaseApp.swift", source / "ContentView.swift", target / "README.md"):
+    for path in (project / "project.pbxproj", scheme, source / "BaseApp.swift", target / "README.md"):
         text = path.read_text()
         text = text.replace("com.example.BaseApp", args.bundle_id).replace("BaseApp", args.name)
         path.write_text(text)
